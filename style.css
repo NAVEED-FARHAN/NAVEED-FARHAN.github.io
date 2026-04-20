@@ -574,9 +574,59 @@ footer {
     border-top: 1px solid var(--glass-border);
 }
 
+/* Responsive Refinements */
 @media (max-width: 992px) {
-    .achievement-story { grid-template-columns: 1fr; }
-    .cert-item { flex-direction: column; gap: 30px; padding: 40px; }
-    .slab-info-group { flex-direction: column; align-items: flex-start; gap: 30px; }
-    .hero-dp { width: 140px; height: 140px; }
+    :root {
+        --nav-height: 60px;
+    }
+
+    .section { padding: 80px 0; }
+    
+    /* About Me Tablet/Mobile */
+    .about-slab {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        padding: 60px 5%;
+    }
+    
+    .about-headline { font-size: 2.2rem; }
+    .about-bio p { font-size: 1.1rem; }
+
+    /* Project Slabs */
+    .project-slab { height: 75vh; }
+    .slab-info h2 { font-size: 3rem; }
+    .slab-content { padding: 40px 5%; }
+    .slab-info-group { flex-direction: column; align-items: flex-start; gap: 20px; }
+
+    /* Certifications */
+    .cert-item { 
+        flex-direction: column; 
+        gap: 20px; 
+        padding: 30px; 
+    }
+    .cert-item-img { width: 120px; height: 120px; }
+    .cert-item-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+    .cert-item-header h3 { font-size: 1.5rem; }
+
+    /* Achievement Story */
+    .achievement-story { grid-template-columns: 1fr; gap: 40px; }
+    .achievement-slide img { height: 350px; }
+}
+
+@media (max-width: 600px) {
+    .hero h1 { font-size: 2.8rem; }
+    .hero-dp { width: 120px; height: 120px; }
+    .tagline { font-size: 0.9rem; letter-spacing: 1px; }
+    
+    .about-stats { grid-template-columns: 1fr; }
+    .stat-item { padding: 20px; }
+    .stat-val { font-size: 2rem; }
+
+    .btn { padding: 12px 30px; font-size: 0.9rem; width: 100%; margin: 10px 0 !important; text-align: center; }
+    .social-links-grid { flex-direction: column; }
+    .social-btn { width: 100%; justify-content: center; }
+
+    .project-slab { height: 65vh; }
+    .slab-info h2 { font-size: 2.4rem; }
+    .slab-info p { font-size: 1rem; }
 }
